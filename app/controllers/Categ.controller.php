@@ -31,17 +31,17 @@ class CategController {
         $this->model->deletelocalidById($idlocalid);
         header("Location: " . BASE_URL);
     }
-    function updateinfo($id) {
-        $this->model->upDateinfoById($id);
-        header("Location: " . BASE_URL);
+    function ShowUptate($id) {
+       $Categ= $this->model->upDatelocalidById($id);
+       $localid = $this->view->UpdateCateg($Categ);
     }
 
 }
     function Updatelocalid() {
         // TODO: validar entrada de datos
-
-        $localidad=$_POST['localidad'];
-        $id = $this->model->updateinfop($localidad);
+        $id_localidad=$_POST['id_localidad'];
+            $localidad=$_POST['localidad'];
+        $id = $this->model->updatelocalid($localidad);
 
         
 }

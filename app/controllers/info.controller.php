@@ -8,8 +8,8 @@ class infoController {
     private $view;
 
     public function __construct() {
-        $this->model = new TaskModel();
-        $this->view = new TaskView();
+        $this->model = new infoModel();
+        $this->view = new infoView();
     }
    
     public function showinfo() {

@@ -38,16 +38,16 @@ class CategModel {
      * modifica una localidad dado su id.
      */
     function upDatelocalidById($id){
-        $sentencia= $this-> db->prepare("SELECT *FROM info_pesca WHERE id_localidad_fk =?;");
+        $sentencia= $this-> db->prepare("SELECT *FROM localidades WHERE id_localidad =?");
         $sentencia->execute([$id]);
-        $info_pesca= $sentencia->fetch(PDO:: FETCH_OBJ);
-        return $info_pesca;
+        $updatecateg= $sentencia->fetch(PDO:: FETCH_OBJ);
+        return $updatecateg;
     
     }
 
-    function updatelocalid($embarcado, $tipo_embarcacion, $equipo_pesca, $carnada,$pesca,$id_localidad_fk) {
-        $sentencia=$this->db->prepare('UPDATE info_pesca SET  embarcado = ?, tipo_embarcacion= ?, equipo_pesca= ?, carnada = ?, pesca=?, id_localidad_fk=? WHERE id_pesca = ?; ');
-        $sentencia->execute ([$embarcado, $tipo_embarcacion, $equipo_pesca, $carnada,$pesca,$id_localidad_fk]);
+    function updatelocalid($localidad,$id_localidad) {
+        $sentencia=$this->db->prepare('UPDATE localidades SET  localidad = ? WHERE id_localidad = ?; ');
+        $sentencia->execute ([$localidad,$id_localidad]);
         header("Location: " . BASE_URL); 
        
         

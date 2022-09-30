@@ -1,6 +1,6 @@
 <?php
 
-class TaskModel {
+class infoModel {
 
     private $db;
 
@@ -71,8 +71,8 @@ class TaskModel {
 
         $query->execute ([$embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$id_localidad_fk,$id_pesca]);
         
-       // header("Location: " . BASE_URL); 
-         var_dump($query->errorInfo()); // y eliminar la redireccion
+     header("Location: " . BASE_URL); 
+  
         
     }
     

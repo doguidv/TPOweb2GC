@@ -1,9 +1,14 @@
 <?php
-
+require_once './libs/smarty-4.2.1/libs/Smarty.class.php';
 class HomeView {
+    private $smarty;
 
+    public function __construct() {
+        $this->smarty = new Smarty(); 
+        // inicializo Smarty
+    }
     function showHomeinfoxlocalid($pesca) {
-        include './templates/header.php';    
+  
  
         // imprime la tabla de info relacionada con la localidad
         echo "<h1>Informacion listada por categoria</h1>";

@@ -67,23 +67,20 @@ case 'Login':
         $id = $params[1];
         $infoController->deleteinfo($id);
         break;
-        
-    case 'ShowWptate':
-        $id = $params[1];
-        $CategController->ShowUpdate($id); 
-        break;
-
-        case 'editCateg':
-            $infoController->editCateg();  
-            break;
-            
+   
     case 'localidad':
         $CategController->showlocalid();
         break;
     case 'addCateg':
         $CategController->addlocalid();
         break;        
-    case 'deleteCateg':
+     case 'ShowUpdatCateg':
+        $id=$params[1];
+        $CategController->ShowUpdate($id);
+        break;    
+    case 'editCateg':
+        $CategController->editCateg();
+        case 'deleteCateg':
         $idlocalid=$params[1];
         $CategController->deleteLocalid($idlocalid);
         break;
