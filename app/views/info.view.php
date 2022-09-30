@@ -13,16 +13,16 @@ class infoView {
     function showpesca($pescas) {
       // imprime la tabla info pesca
       
-      $this->smarty->assign('id_pesca', id_pesca($id_pesca)); 
-      $this->smarty->assign('embarcado', embarcado ($embarcado));
+      $this->smarty->assign('id_pesca',$pescas); 
+      $this->smarty->assign('embarcado',$pescas);
 
-      $this->smarty->assign('Tipo_embarcado', tipo_pesca($tipo_embarcado)); 
-      $this->smarty->assign('equipo_pesca',equipo_pesca ($equipo_pesca));
+      $this->smarty->assign('Tipo_embarcado',$pescas); 
+      $this->smarty->assign('equipo_pesca',$pescas);
 
-      $this->smarty->assign('carnada', count($carnada)); 
-      $this->smarty->assign('pesca', $pesca);
+      $this->smarty->assign('carnada',$pescas); 
+      $this->smarty->assign('pesca',$pescas);
 
-      $this->smarty->assign('id_localidad_fk', count($id_localidad_fk));
+      $this->smarty->assign('id_localidad_fk',$pescas);
 
       $this->smarty->display('form_ABM_info.tpl');
 

@@ -1,3 +1,4 @@
+{include file="header.tpl"}
 <table>
 <thead>
 <tr>

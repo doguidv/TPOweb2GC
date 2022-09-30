@@ -1,4 +1,4 @@
-<h1>Informacion listada por categoria</h1>";
+<h1>Informacion listada por categoria</h1>
 <table>
 <thead>
 <tr>
@@ -13,20 +13,17 @@
 <thead>
 <tbody>
 
-foreach($pesca as $pescas ) {
-{{foreach from=$pesca item=$pescas }
+{foreach from=$pesca item=$pescas }
     
-{/foreach}}
-<tr>
+    <tr>
     <td>{$pescas->id_pesca}</td>
     <td>{$pescas->embarcado}</td>
     <td>{$pescas->tipo_embarcacion}</td>
-    <td>{$pescas->equipo_pesca</td>
-    <td>{$pescas->carnada</td>
+    <td>{$pescas->equipo_pesca}</td>
+    <td>{$pescas->carnada}</td>
     <td>{$pescas->pesca}</td>
     <td>{$pescas->localidad}</td>
      </tr>
 
-
-}
+    {/foreach}
 
