@@ -1,4 +1,4 @@
-                 
+              
 {include file="header.tpl"}           
                  <table>
                         <thead>
@@ -17,7 +17,7 @@
                         <thead>
                         <tbody>
                     
-                        {foreach from=$pescas item=$pesca}
+                {foreach from=$pescas item=$pesca}
                     
                         <tr>
                             <td>{$pesca->id_pesca}</td>
@@ -31,9 +31,10 @@
                             <td><a href='update/{$pesca->id_pesca}' type='button' class='btn btn-danger ml-auto'>modificar</a>
                             <a href='delete/{$pesca->id_pesca}' type='button' class='btn btn-danger ml-auto'>Borrar</a> </td>
                         </tr>
+                 {/foreach}
                          </tbody>
                           
-                        </table>
+    </table>
     
     <form action="add" method="POST" class="my-4">
     <div class="row">
@@ -85,10 +86,10 @@
     <select name='id_localidad_fk' class='from_control'> 
     
          
-            {foreach from=$localidad item=$infolo}{
-            <option value="{$infoloc->id_localidad}">{$infoloc->id_localidad}{$infoloc->localidad}</option>
+            {foreach from=$localidad item=$infoloc}
+            <option value="{$infoloc->id_localidad}">{$infoloc->id_localidad}-{$infoloc->localidad}</option>
     
-         }
+         {/foreach}
     </select>
             </div>
         </div>
@@ -131,25 +132,25 @@
            </tr>
         <td>Tipo  de embarcacion</td>
            
-            <td><input type = "text" name= "equipo_pesca"  value=" <?php echo $infop->equipo_pesca; ?>"></td>
+            <td><input type = "text" name= "equipo_pesca"  value="{$infop->equipo_pesca}"></td>
         </tr>
         <tr>
             <td>carnada</td>
-            <td><input type = "text" name= "carnada"  value=" <?php echo $infop->carnada; ?>"></td>
+            <td><input type = "text" name= "carnada"  value="{$infop->carnada}"></td>
         </tr>
         <tr>
             <td>pesca</td>
-            <td><input type = "text" name= "pesca"  value=" ->id_localidad"></td>
+            <td><input type = "text" name= "pesca"  value="{$infop->id_localidad}"></td>
         </tr>
         <select name='id_localidad_fk' class='from_control'> 
 
              
-        {foreach from=$localidad item=$infoloc}{
-    <option value="{$infoloc->id_localidad}">{$infoloc->id_localidad}-{$infoloc->localidad}'</option>';
+        {foreach from=$localidad item=$infoloc}
+    <option value="{$infoloc->id_localidad}">{$infoloc->id_localidad}-{$infoloc->localidad}</option>
 
-}
+{/foreach}
         <tr>
-            <td><input type = "hidden" name= "id_pesca" value=" {$infop->id_pesca}"></td>
+            <td><input type = "hidden" name= "id_pesca" value="{$infop->id_pesca}"></td>
         </tr>
        
         <tr> 

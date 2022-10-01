@@ -25,30 +25,17 @@ class HomeView {
             }
             
     function showHomelocalid($categ) {
-        include './templates/header.php';  
         // imprime la tabla de categoria  con la localidad
-        echo "<h2> Listado de categoria</h1>";
-                echo "<table>
-                <thead>
-                <tr>
-                    <th>id_localidad</th>
-                    <th>Localidad</th>
-                    </tr>
-                <thead>
-                <tbody>
-                ";
-                foreach($categ as $categ ) {
-                echo "
-                <tr>
-                    <td>$categ->id_localidad</td>
-                    <td>$categ->localidad</td>
-                     </tr>
-                ";
-                
-                }
+  
+        $this->smarty->assign('id_localidad',$categ);
+  
+        $this->smarty->assign('localidad',$categ);
+  
+        $this->smarty->display('Home_view_Categ.tpl');
+             
+        
+           
+    }
     
                 
-            }
-            
- 
-    }
+}

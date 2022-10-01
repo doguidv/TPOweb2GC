@@ -1,3 +1,4 @@
+{include file="header.tpl"}
 <h1>Informacion listada por categoria</h1>
 <table>
 <thead>
@@ -27,3 +28,4 @@
 
     {/foreach}
 
+ 

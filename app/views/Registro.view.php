@@ -5,7 +5,7 @@ class RegistroView{
 
     
 function renderForm(){
-    require_once 'templates/header.php';
+ 
         echo '
             <h2>Registro</h2>
             <form action="CrearCuenta" method="POST">
