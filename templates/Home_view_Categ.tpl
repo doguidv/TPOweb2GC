@@ -1,4 +1,6 @@
+   {include file="header.tpl"}
    <!-- // imprime la tabla de categoria  con la localidad-->
+
    <h2> Listado de categoria</h1>
    <table>
            <thead>
@@ -11,8 +13,8 @@
    
            {foreach from=$categ item=$categs }
                <tr>
-                   <td>{$categ->id_localidad}</td>
-                   <td>{$categ->localidad}</td>
+                   <td>{$categs->id_localidad}</td>
+                   <td>{$categs->localidad}</td>
                </tr>
            {/foreach}            
            </tbody>

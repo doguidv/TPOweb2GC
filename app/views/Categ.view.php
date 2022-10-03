@@ -9,8 +9,8 @@ class CategView {
     }
     function showlocalid($localidades) {
       
-        $this->smarty->assign('id_localidad',$localidades->id_localidad); 
-        $this->smarty->assign('localidad',$localidades->localidad);
+        $this->smarty->assign('localidades',$localidades); 
+     
   
         $this->smarty->display('ShowLocalidades.tpl');
     
@@ -24,8 +24,7 @@ class CategView {
 
     function UpdateCateg($Categ){
 
-        $this->smarty->assign('id_localidad',$Categ->id_localidad); 
-        $this->smarty->assign('localidad',$Categ->localidad);
+        $this->smarty->assign('Categ',$Categ); 
         $this->smarty->display('form_ABM_Categ.tpl');
 
     }

@@ -101,13 +101,7 @@
     <!--Update--> 
 
     <form method="POST" action= "editinfo";>
-           
-           
-           
-           
-           
-           
-           
+        
            
            
            
