@@ -13,7 +13,7 @@ class infoView {
     function showpesca($pesca) {
       // imprime la tabla info pesca
       $this->smarty->assign('pesca',$pesca); 
-       $this->smarty->display('form_ABM_info.tpl');
+       $this->smarty->display('ShowInfoPesca.tpl');
 
     }
  
@@ -22,24 +22,19 @@ class infoView {
    $this->smarty->assign('localidad',$localidad);
     }
            
-    function add(){
-                
-      $this->smarty->display('Add_info.tpl');
-      
-
-}
+      function add(){
+        $this->smarty->display('Add_info.tpl');
+      }
 
                                     //Update
             function upDateinfo_pesca($infop,$localidad){
               $this->smarty->assign('localidad',$localidad);
-              $this->smarty->assign('infop',$infop); 
-            
-          
+               $this->smarty->assign('infop',$infop);         
                 $this->smarty->display('Update_info.tpl');
   
   
-    }
-    }             
+        } 
+}             
 
             
            

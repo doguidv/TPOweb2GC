@@ -14,14 +14,11 @@ class CategView {
   
         $this->smarty->display('ShowLocalidades.tpl');
     
-            }
+                }
         
-            function addCateg(){
-                
-                $this->smarty->display('form_ABM_Categ.tpl');
-                
-
-}
+            function addCateg(){                
+  
+            }
 
     function UpdateCateg($Categ){
 
