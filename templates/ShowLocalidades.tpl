@@ -1,7 +1,6 @@
-{include file="Add_Categ.tpl" }
 
-
-
+{include file="header.tpl"}
+{include file="Add_Categ.tpl"}
 <table>
 <thead>
 <tr>
