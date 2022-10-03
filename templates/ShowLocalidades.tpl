@@ -1,4 +1,4 @@
-{include file="form_ABM_Categ.tpl" assign=name var1=value}
+{include file="form_ABM_Categ.tpl" }
 <table>
 <thead>
 <tr>

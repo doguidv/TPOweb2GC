@@ -10,18 +10,16 @@ class infoView {
 
 
  
-    function showpesca($pescas) {
+    function showpesca($pesca) {
       // imprime la tabla info pesca
-      
-      $this->smarty->assign('pescas',$pescas); 
- 
-      $this->smarty->display('form_ABM_info.tpl');
+      $this->smarty->assign('pesca',$pesca); 
+       $this->smarty->display('form_ABM_info.tpl');
 
     }
  
    function showAddinfopesca($infoloc,$localidad){ 
     $this->smarty->assign('infoloc',$infoloc); 
-    $this->smarty->assign('localidad',$infoloc);
+    $this->smarty->assign('localidad',$localidad);
  $this->smarty->display('form_ABM_info.tpl');
     }
 
@@ -30,7 +28,7 @@ class infoView {
               $this->smarty->assign('infop',$infop); 
               $this->smarty->assign('localidad',$localidad);
           
-                $this->smarty->display('form_ABM_info.tpl');
+                $this->smarty->display('Update_info.tpl');
   
   
     }

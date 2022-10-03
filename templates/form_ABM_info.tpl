@@ -1,6 +1,8 @@
               
 {include file="header.tpl"}           
-                 <table>
+
+
+<table>
                         <thead>
                         <tr>
                             <th>id_pesca</th>
@@ -17,19 +19,19 @@
                         <thead>
                         <tbody>
                     
-                {foreach from=$pescas item=$pesca}
+                {foreach from=$pesca item=$pescas}
                     
                         <tr>
-                            <td>{$pesca->id_pesca}</td>
-                            <td>{$pesca->embarcado}</td>
-                            <td>{$pesca->tipo_embarcacion}</td>
-                            <td>{$pesca->equipo_pesca}</td>
-                            <td>{$pesca->carnada}</td>
-                            <td>{$pesca->pesca}</td>
-                            <td>{$pesca->id_localidad_fk}</td> 
-                            <td>{$pesca->localidad}</td>    
-                            <td><a href='update/{$pesca->id_pesca}' type='button' class='btn btn-danger ml-auto'>modificar</a>
-                            <a href='delete/{$pesca->id_pesca}' type='button' class='btn btn-danger ml-auto'>Borrar</a> </td>
+                            <td>{$pescas->id_pesca}</td>
+                            <td>{$pescas->embarcado}</td>
+                            <td>{$pescas->tipo_embarcacion}</td>
+                            <td>{$pescas->equipo_pesca}</td>
+                            <td>{$pescas->carnada}</td>
+                            <td>{$pescas->pesca}</td>
+                            <td>{$pescas->id_localidad_fk}</td> 
+                            <td>{$pescas->localidad}</td>    
+                            <td><a href='update/{$pescas->id_pesca}' type='button' class='btn btn-danger ml-auto'>modificar</a>
+                            <a href='delete/{$pescas->id_pesca}' type='button' class='btn btn-danger ml-auto'>Borrar</a> </td>
                         </tr>
                  {/foreach}
                          </tbody>
@@ -140,8 +142,8 @@
         <select name='id_localidad_fk' class='from_control'> 
 
              
-        {foreach from=$localidad item=$infoloc}
-    <option value="{$infoloc->id_localidad}">{$infoloc->id_localidad}-{$infoloc->localidad}</option>
+        {foreach from=$localidad item=$infop}
+    <option value="{$infop->id_localidad}">{$infop->id_localidad}-{$infop->localidad}</option>
 
 {/foreach}
         <tr>
