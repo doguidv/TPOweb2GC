@@ -17,6 +17,7 @@ class CategView {
             }
         
             function addCateg(){
+                
                 $this->smarty->display('form_ABM_Categ.tpl');
                 
 
@@ -25,7 +26,7 @@ class CategView {
     function UpdateCateg($Categ){
 
         $this->smarty->assign('Categ',$Categ); 
-        $this->smarty->display('form_ABM_Categ.tpl');
+        $this->smarty->display('Update_Categ.tpl');
 
     }
 }

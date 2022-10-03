@@ -22,11 +22,19 @@ class infoView {
     $this->smarty->assign('localidad',$localidad);
  $this->smarty->display('form_ABM_info.tpl');
     }
+           
+    function add(){
+                
+      $this->smarty->display('form_ABM_info.tpl');
+      
+
+}
 
                                     //Update
             function upDateinfo_pesca($infop,$localidad){
-              $this->smarty->assign('infop',$infop); 
               $this->smarty->assign('localidad',$localidad);
+              $this->smarty->assign('infop',$infop); 
+            
           
                 $this->smarty->display('Update_info.tpl');
   
