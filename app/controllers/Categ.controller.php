@@ -31,9 +31,9 @@ class CategController {
         $this->model->deletelocalidById($idlocalid);
         header("Location: " . BASE_URL);
     }
-    function ShowUptate($id) {
+    function ShowUpdateCateg($id) {
        $Categ= $this->model->upDatelocalidById($id);
-       $localid = $this->view->UpdateCateg($Categ);
+        $this->view->UpdateCateg($Categ);
     }
 
 }
@@ -41,7 +41,7 @@ class CategController {
         // TODO: validar entrada de datos
         $id_localidad=$_POST['id_localidad'];
             $localidad=$_POST['localidad'];
-        $id = $this->model->updatelocalid($localidad);
+        $id = $this->model->updatelocalid($localidad,$id_localidad);
 
         
 }

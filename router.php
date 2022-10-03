@@ -74,12 +74,12 @@ case 'Login':
     case 'addCateg':
         $CategController->addlocalid();
         break;        
-     case 'ShowUpdate':
+     case 'ShowUpdatCateg':
         $id=$params[1];
-        $CategController->ShowUpdate($id);
+        $CategController->ShowUpdateCateg($id);
         break;    
     case 'editCateg':
-        $CategController->editCateg();
+        $CategController->Updatelocalid();
         case 'deleteCateg':
         $idlocalid=$params[1];
         $CategController->deleteLocalid($idlocalid);

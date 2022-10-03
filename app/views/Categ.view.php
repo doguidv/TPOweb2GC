@@ -7,22 +7,17 @@ class CategView {
         $this->smarty = new Smarty(); 
         // inicializo Smarty
     }
-    function showlocalid($localidades) {
-      
-        $this->smarty->assign('localidades',$localidades); 
-     
-  
+    function showlocalid($localidades) {    
+        $this->smarty->assign('localidades',$localidades);   
         $this->smarty->display('ShowLocalidades.tpl');
-    
-                }
-        
-                function addCateg(){   
-                              
+      }
+            function addCateg(){                               
             }
 
     function UpdateCateg($Categ){
         $this->smarty->assign('Categ',$Categ);  
- 
+        $this->smarty->display('Update_Categ.tpl');
+        
 
     }
 }
