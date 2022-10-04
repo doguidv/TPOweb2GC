@@ -1,9 +1,9 @@
 {include file="header.tpl"}
 <h1>Informacion listada por categoria</h1>
 <p1> Filtrar por Categoria</p1>
-<select name='id_localidad_fk' class='from_control'>          
-            {foreach from=$pesca item=$pescA}
-         <option value="{$pescA->id_localidad_fk}">{$pescA->id_localidad_fk}-{$pescA->localidad}</option>
+<select name='id_localidad' class='from_control'>          
+            {foreach from=$categ item=$pescA}
+         <option value="{$pescA->id_localidad}">{$pescA->id_localidad}-{$pescA->localidad}</option>
          {/foreach}
     </select>
 
@@ -21,15 +21,14 @@
     <tbody>
    
     {foreach from=$pesca item=$pescas }  
-{if  {$pescas->localidad} =={{$pescA->localidad}}}
+{if  {$pescas->id_localidad_fk}=={{$pescA->id_localidad}}}
     <tr>
         <td>{$pescas->embarcado}</td>
         <td>{$pescas->tipo_embarcacion}</td>
         <td>{$pescas->equipo_pesca}</td>
         <td>{$pescas->carnada}</td>
         <td>{$pescas->pesca}</td>
-        <td>{$pescas->localidad}</td>        
-        <td>{$pescas->id_localidad_fk}</td>
+        <td>{$pescas->localidad}</td>
      </tr>
     
 {/if}

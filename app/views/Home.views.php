@@ -7,9 +7,11 @@ class HomeView {
         $this->smarty = new Smarty(); 
         // inicializo Smarty
     }
-    function showHomeinfoxlocalid($pesca) {
+    function showHomeinfoxlocalid($pesca,$categ) {
         
         $this->smarty->assign('pesca',$pesca); 
+        
+        $this->smarty->assign('categ',$categ); 
         $this->smarty->display('Home_view.tpl');
                 
             }

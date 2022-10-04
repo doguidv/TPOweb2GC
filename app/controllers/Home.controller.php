@@ -14,7 +14,9 @@ class HomeController {
 
     public function showHomeInfo() {
           $pesca=  $this->modelHome->getAllinfopesca();
-        $this->viewHome->showHomeinfoxlocalid($pesca);
+          $categ=  $this->modelHome->getAllHomelocalid();
+          
+        $this->viewHome->showHomeinfoxlocalid($pesca,$categ);
     }
  
     public function showHomeCateg() {
