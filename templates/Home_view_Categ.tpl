@@ -5,7 +5,6 @@
    <table>
            <thead>
            <tr>
-               <th>id_localidad</th>
                <th>Localidad</th>
                </tr>
            <thead>
@@ -13,7 +12,7 @@
    
            {foreach from=$categ item=$categs }
                <tr>
-                   <td>{$categs->id_localidad}</td>
+           
                    <td>{$categs->localidad}</td>
                </tr>
            {/foreach}            

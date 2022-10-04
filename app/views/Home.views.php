@@ -10,23 +10,20 @@ class HomeView {
     function showHomeinfoxlocalid($pesca) {
         
         $this->smarty->assign('pesca',$pesca); 
-     
-  
         $this->smarty->display('Home_view.tpl');
                 
             }
             
     function showHomelocalid($categ) {
         // imprime la tabla de categoria  con la localidad
-        $this->smarty->assign('categ',$categ); 
-     
-  
-                
+        $this->smarty->assign('categ',$categ);                
         $this->smarty->display('Home_view_Categ.tpl');
              
         
            
     }
-    
+    function SearchLocation(){
+
+    }
                 
 }

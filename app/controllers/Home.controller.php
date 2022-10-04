@@ -20,6 +20,7 @@ class HomeController {
     public function showHomeCateg() {
         $categ=  $this->modelHome->getAllHomelocalid();
       $this->viewHome->showHomelocalid($categ);
+     
   }
 
      

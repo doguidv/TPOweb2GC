@@ -24,8 +24,7 @@ class HomeModel {
         
         return $localid;
     }
-    
-    
+
     public function getAllinfopesca(){
       
         $query = $this->db->prepare("SELECT info_pesca.*,localidades.localidad  as localidad FROM info_pesca JOIN localidades ON info_pesca.id_localidad_fk = localidades.id_localidad");
