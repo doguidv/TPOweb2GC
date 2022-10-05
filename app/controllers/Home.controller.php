@@ -32,7 +32,7 @@ class HomeController {
 
     }
     public function Detalle($id){
-      $infoPesca= $this->moledHome->GetinfoById($id);
-      $this->viewHome->ShowDetalleInfop($indoPesca);    
+      $infoPesca= $this->modelHome->GetinfoById($id);
+      $this->viewHome->ShowDetalleInfop($infoPesca);    
         }
 }

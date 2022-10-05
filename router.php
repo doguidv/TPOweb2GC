@@ -63,7 +63,8 @@ switch ($params[0]) {
         $infoController->deleteinfo($id);
         break;
     case'Detalle':
-        $infoController->Detalle($id);
+        $id = $params[1];        
+        $HomeController->Detalle($id);
     break;
         //Categ
     case 'localidad':
