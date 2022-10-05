@@ -31,7 +31,6 @@ class CategModel {
     public function insertlocalid($localidad) {
         $query = $this->db->prepare("INSERT INTO localidades (localidad) VALUES (?)");
         $query->execute([$localidad]);
-
         return $this->db->lastInsertId();
     }
 /**
@@ -46,11 +45,9 @@ class CategModel {
     }
 
     function updatelocalid($localidad,$id_localidad) {
-        $sentencia=$this->db->prepare('UPDATE localidades SET  localidad =? WHERE id_localidad =?; ');
+        $sentencia=$this->db->prepare('UPDATE localidades SET  localidad =? WHERE id_localidad =?;');
         $sentencia->execute ([$localidad,$id_localidad]);
         header("Location: " . BASE_URL); 
-       
-        
     }
     /**
      * Elimina una localidad dado su id.

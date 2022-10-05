@@ -18,11 +18,9 @@ class infoController {
         $localidad=$this->model->getAlllocalidades();
         $this->view->showAddinfopesca($infopesca,$localidad);
         $this->view->showpesca($pesca);
-        
     }
     function addInfopesca() {
         // TODO: validar entrada de datos
-
         $embarcado = $_POST['embarcado'];
         $tipo_embarcacion = $_POST['tipo_embarcacion'];
         $equipo_pesca = $_POST['equipo_pesca'];
@@ -30,26 +28,16 @@ class infoController {
         $pesca= $_POST['pesca'];
         $id_localidad_fk=$_POST['id_localidad_fk'];
         $id = $this->model->insertinfopesca($embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$id_localidad_fk);
-
         header("Location: " . BASE_URL); 
     }
-    //seccion update
-
-
-    
-    
+    //seccion update   
     function upDateinfo($id) {
         $infop=$this->model->updateinfoById($id);
         $localidad=$this->model->getAlllocalidades();
-        $this->view->UpDateinfo_pesca($infop,$localidad);
-
-        
-        
+        $this->view->UpDateinfo_pesca($infop,$localidad);       
     }
     function editinfo() {
-        // TODO: validar entrada de datos
-
-        
+        // TODO: validar entrada de datos       
         $embarcado = $_POST['embarcado'];
         $tipo_embarcacion = $_POST['tipo_embarcacion'];
         $equipo_pesca = $_POST['equipo_pesca'];
@@ -58,8 +46,6 @@ class infoController {
         $id_localidad_fk=$_POST['id_localidad_fk'];
         $id_pesca = $_POST['id_pesca'];
         $id = $this->model->info_pesca($embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$id_localidad_fk,$id_pesca);
-
-        
     }
 
     function deleteinfo($id) {

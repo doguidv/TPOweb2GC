@@ -33,17 +33,15 @@ switch ($params[0]) {
          $HomeController->showHomeCateg();
           break;
     case 'Registro':
-$RegistroController->showRegistro();
-break;
-case 'CrearCuenta':
+        $RegistroController->showRegistro();
+        break;
+    case 'CrearCuenta':
     $RegistroController->addUser();
     break;
-    
-case 'login':
+    case 'login':
     $LoginController->showLogin();
-    break;
-    
-case 'Login':
+    break;   
+    case 'Login':
     $LoginController->Login();
     break;
     case 'infopesca':    
@@ -52,22 +50,18 @@ case 'Login':
     case 'add':
         $infoController->addInfopesca();
         break;
-
     case 'update':
         $id = $params[1];
         $infoController->updateinfo($id); 
         break;
-
     case 'editinfo':
             $infoController->editinfo();  
-            break;
-        
+            break; 
     case 'delete':
         // obtengo el parametro de la acción
         $id = $params[1];
         $infoController->deleteinfo($id);
         break;
-   
     case 'localidad':
         $CategController->showlocalid();
         break;
@@ -77,15 +71,19 @@ case 'Login':
      case 'ShowUpdatCateg':
         $id=$params[1];
         $CategController->ShowUpdateCateg($id);
-        break;    
+    break;    
     case 'editCateg':
-        $CategController->Updatelocalid();
-        case 'deleteCateg':
+           $CategController->Updatelocalid();
+    break;
+    case 'deleteCateg':
         $idlocalid=$params[1];
         $CategController->deleteLocalid($idlocalid);
         break;
+    case 'filtrar':
+        $HomeController->filtrar();  
+        break;  
         
-        default:
+    default:
         echo('404 Page not found');
         break;
 }

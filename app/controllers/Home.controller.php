@@ -25,6 +25,12 @@ class HomeController {
      
   }
 
+  public function filtrar() {
+    $categ=  $this->modelHome->getAllHomelocalid();
+      $this->viewHome->SearchLocation($categ);
+ 
+}
+
      
      
 }

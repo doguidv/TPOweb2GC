@@ -16,7 +16,6 @@
     <td>  <a href='ShowUpdatCateg/{$localidad->id_localidad}' type='button' class='btn btn-danger ml-auto'>modificar</a>
         <a href='deleteCateg/{$localidad->id_localidad}' type='button' class='btn btn-danger ml-auto'>Borrar</a></td>
     </tr>
-
     {/foreach}
 </tbody>   
 </table>

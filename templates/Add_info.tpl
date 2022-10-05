@@ -46,13 +46,9 @@
 
         <div class="col-3">
             <div class="form-group">
-
     <select name='id_localidad_fk' class='from_control'> 
-    
-         
-            {foreach from=$localidad item=$infoloc}
+                {foreach from=$localidad item=$infoloc}
             <option value="{$infoloc->id_localidad}">{$infoloc->id_localidad}-{$infoloc->localidad}</option>
-    
          {/foreach}
     </select>
             </div>

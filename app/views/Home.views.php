@@ -8,23 +8,19 @@ class HomeView {
         // inicializo Smarty
     }
     function showHomeinfoxlocalid($pesca,$categ) {
-        
-        $this->smarty->assign('pesca',$pesca); 
-        
+        $this->smarty->assign('pesca',$pesca);   
         $this->smarty->assign('categ',$categ); 
-        $this->smarty->display('Home_view.tpl');
-                
-            }
+        $this->smarty->display('Home_view.tpl');                
+         }
             
     function showHomelocalid($categ) {
         // imprime la tabla de categoria  con la localidad
         $this->smarty->assign('categ',$categ);                
-        $this->smarty->display('Home_view_Categ.tpl');
-             
-        
-           
+        $this->smarty->display('Home_view_Categ.tpl');                            
     }
-    function SearchLocation(){
+    function SearchLocation($categ){
+        $this->smarty->assign('categ',$categ);                
+        $this->smarty->display('SearchCateg.tpl');                            
 
     }
                 

@@ -49,6 +49,11 @@
                     <a class="nav-link" aria-current="page" href="localidad">localidad</a>
                   </li>
                 </ul>
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="filtrar">filtrar</a>
+                 </li>
+                </ul>
               </div>
             </div>
           </nav>

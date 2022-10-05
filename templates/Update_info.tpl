@@ -20,7 +20,6 @@
      <tr>
         </tr>
      <td>Tipo  de embarcacion</td>
-        
          <td><input type = "text" name= "equipo_pesca"  value="{$infop->equipo_pesca}"></td>
      </tr>
      <tr>
@@ -41,7 +40,7 @@
      </tr>
     
      <tr> 
-     <td><button><input type= "submit"   value=" Editar tarea"></button></td>
+     <td><button><input type= "submit"   value="Modificar Info Pesca"></button></td>
      </tr>
  </table>
 </form>

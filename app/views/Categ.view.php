@@ -17,7 +17,5 @@ class CategView {
     function UpdateCateg($Categ){
         $this->smarty->assign('Categ',$Categ);  
         $this->smarty->display('Update_Categ.tpl');
-        
-
     }
 }
