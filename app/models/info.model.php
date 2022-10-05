@@ -49,9 +49,9 @@ class infoModel {
     /**
      * Inserta info pesca en la base de datos.
      */
-    public function insertinfopesca($embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$id_localidad_fk) {
-        $query = $this->db->prepare("INSERT INTO info_pesca (embarcado, tipo_embarcacion, equipo_pesca,carnada,pesca,id_localidad_fk) VALUES (?,?, ?, ?, ?,?)");
-        $query->execute([$embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$id_localidad_fk]);
+    public function insertinfopesca($embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$Detalles_Pesca,$id_localidad_fk) {
+        $query = $this->db->prepare("INSERT INTO info_pesca (embarcado, tipo_embarcacion, equipo_pesca,carnada,pesca,Detalles_Pesca,id_localidad_fk) VALUES (?,?, ?, ?, ?,?,?)");
+        $query->execute([$embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$Detalles_Pesca,$id_localidad_fk]);
 
         return $this->db->lastInsertId();
     }
@@ -65,9 +65,9 @@ class infoModel {
         return $infop;
     
     }
-    function info_pesca($embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$id_localidad_fk,$id_pesca) {
-        $query=$this->db->prepare('UPDATE info_pesca SET  embarcado = ?, tipo_embarcacion= ?, equipo_pesca= ?, carnada = ?,pesca = ?,id_localidad_fk = ? WHERE id_pesca= ?;');
-        $query->execute ([$embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$id_localidad_fk,$id_pesca]);      
+    function info_pesca($embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$Detalles_Pesca,$id_localidad_fk,$id_pesca) {
+        $query=$this->db->prepare('UPDATE info_pesca SET  embarcado = ?, tipo_embarcacion= ?, equipo_pesca= ?, carnada = ?,pesca = ?,Detalles_Pesca=?,id_localidad_fk = ? WHERE id_pesca= ?;');
+        $query->execute ([$embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$Detalles_Pesca,$id_localidad_fk,$id_pesca]);      
      header("Location: " . BASE_URL); 
     }
     /**

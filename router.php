@@ -62,6 +62,10 @@ switch ($params[0]) {
         $id = $params[1];
         $infoController->deleteinfo($id);
         break;
+    case'Detalle':
+        $infoController->Detalle($id);
+    break;
+        //Categ
     case 'localidad':
         $CategController->showlocalid();
         break;
@@ -71,17 +75,14 @@ switch ($params[0]) {
      case 'ShowUpdatCateg':
         $id=$params[1];
         $CategController->ShowUpdateCateg($id);
-    break;    
+         break;    
     case 'editCateg':
            $CategController->Updatelocalid();
-    break;
+            break;
     case 'deleteCateg':
         $idlocalid=$params[1];
         $CategController->deleteLocalid($idlocalid);
         break;
-    case 'filtrar':
-        $HomeController->filtrar();  
-        break;  
         case 'Buscar':
             $HomeController->buscar();  
             break;  

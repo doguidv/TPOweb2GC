@@ -27,7 +27,8 @@ class infoController {
         $carnada= $_POST['carnada'];
         $pesca= $_POST['pesca'];
         $id_localidad_fk=$_POST['id_localidad_fk'];
-        $id = $this->model->insertinfopesca($embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$id_localidad_fk);
+        $Detalles_Pesca=$_POST['Detalles_Pesca'];
+        $id = $this->model->insertinfopesca($embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$Detalles_Pesca,$id_localidad_fk);
         header("Location: " . BASE_URL); 
     }
     //seccion update   
@@ -45,7 +46,8 @@ class infoController {
         $pesca= $_POST['pesca'];
         $id_localidad_fk=$_POST['id_localidad_fk'];
         $id_pesca = $_POST['id_pesca'];
-        $id = $this->model->info_pesca($embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$id_localidad_fk,$id_pesca);
+        $Detalles_Pesca=$_POST['Detalles_Pesca'];
+        $id = $this->model->info_pesca($embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$Detalles_Pesca,$id_localidad_fk,$id_pesca);
     }
 
     function deleteinfo($id) {

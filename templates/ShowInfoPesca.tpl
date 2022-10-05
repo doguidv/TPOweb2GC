@@ -11,9 +11,9 @@
                             <th>Equipo de pesca</th>
                             <th>Carnada</th>
                               <th>Pesca</th>
+                              <th>Detalles</th>
 
                               <th>localidad_fk</th>
-
                               <th>localidad</th>
                               </tr>
                         <thead>
@@ -28,8 +28,10 @@
                             <td>{$pescas->equipo_pesca}</td>
                             <td>{$pescas->carnada}</td>
                             <td>{$pescas->pesca}</td>
+                            <td>{$pescas->Detalles_Pesca}</td> 
                             <td>{$pescas->id_localidad_fk}</td> 
-                            <td>{$pescas->localidad}</td>    
+                            <td>{$pescas->localidad}</td>
+                               
                             <td><a href='update/{$pescas->id_pesca}' type='button' class='btn btn-danger ml-auto'>modificar</a>
                             <a href='delete/{$pescas->id_pesca}' type='button' class='btn btn-danger ml-auto'>Borrar</a> </td>
                         </tr>

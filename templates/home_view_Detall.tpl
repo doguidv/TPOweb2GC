@@ -1,0 +1,1 @@
+<p>{$infoPesca->Detalles_Pesca}</p>

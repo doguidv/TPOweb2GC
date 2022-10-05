@@ -4,7 +4,7 @@
         <div class="col-9">                                              
         <div class="form-group">
         <label>Agregue localidad</label>
-            <input name="localidad" type="text" value="{$Categ->localidad}" class="form-control">
+            <input name="localidad" type="text" value="{$Categ->localidad}">
          <input type = "hidden" name= "id_localidad" value="{$Categ->id_localidad}">
          </div>                          
     </div>

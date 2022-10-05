@@ -30,6 +30,10 @@
          <td>pesca</td>
          <td><input type = "text" name= "pesca"  value="{$infop->pesca}"></td>
      </tr>
+     <tr>
+     <td>Detalles</td>
+     <td><input type = "text" name= "Detalles_Pesca"  value="{$infop->Detalles_Pesca}"></td>
+ </tr>
      <select name='id_localidad_fk' class='from_control'>          
          {foreach from=$localidad item=$infop}
          <option value="{$infop->id_localidad}">{$infop->id_localidad}-{$infop->localidad}</option>

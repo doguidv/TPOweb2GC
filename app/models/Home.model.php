@@ -6,7 +6,7 @@ class HomeModel {
 
     public function __construct() {
         $this->db = new PDO('mysql:host=localhost;'.'dbname=tpoweb2;charset=utf8', 'root', '');
-    }
+        }
     /**
      * Devuelve la lista de tareas completa.
      */
@@ -21,21 +21,25 @@ class HomeModel {
         // 3. obtengo los resultados
         $localid = $query->fetchAll(PDO::FETCH_OBJ); // devuelve un arreglo de objetos      
         return $localid;
-    }
+        }
     public function getAllinfopesca(){      
         $query = $this->db->prepare("SELECT info_pesca.*,localidades.localidad  as localidad FROM info_pesca JOIN localidades ON info_pesca.id_localidad_fk = localidades.id_localidad");
         $query->execute();
          $info=$query->fetchAll(PDO::FETCH_OBJ);
          return $info;
-     }
-public function GetAllInfoPescaXpesca($id_localidad){
-    $query = $this->db->prepare("SELECT info_pesca.*,localidades.localidad  as localidad FROM info_pesca JOIN localidades ON info_pesca.id_localidad_fk = localidades.id_localidad WHERE id_localidad_fk LIKE ? ");
-    $query->execute([$id_localidad]);
-    $infoXlocalidad=$query->fetchAll(PDO::FETCH_OBJ);
-     return $infoXlocalidad;
+         }
+    public function GetAllInfoPescaXpesca($id_localidad){
+        $query = $this->db->prepare("SELECT info_pesca.*,localidades.localidad  as localidad FROM info_pesca JOIN localidades ON info_pesca.id_localidad_fk = localidades.id_localidad WHERE id_localidad_fk LIKE ? ");
+        $query->execute([$id_localidad]);
+        $infoXlocalidad=$query->fetchAll(PDO::FETCH_OBJ);
+        return $infoXlocalidad;
+        }
+    public  function GetinfoById($id){
+        $sentencia= $this-> db->prepare("SELECT *FROM info_pesca WHERE id_pesca =?;");
+        $sentencia->execute([$id]);
+        $infop= $sentencia->fetch(PDO:: FETCH_OBJ);
+        return $infop;
+        }
 
 }
-
-}
-
 

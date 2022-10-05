@@ -24,20 +24,15 @@ class HomeController {
      
   }
 
-  public function filtrar() {
-    $categ  =  $this->modelHome->getAllHomelocalid();
-      $this->viewHome->SearchLocation($categ);
- 
-}
 
   public function buscar() {
    $id_localidad  = $_POST['id_localidad'];
     $InfopXLocalidad  = $this->modelHome->GetAllInfoPescaXpesca($id_localidad);
     $this->viewHome->ShowInfoxLocalid($InfopXLocalidad);
 
+    }
+    public function Detalle($id){
+      $infoPesca= $this->moledHome->GetinfoById($id);
+      $this->viewHome->ShowDetalleInfop($indoPesca);    
+        }
 }
-
-     
-     
-}
-    

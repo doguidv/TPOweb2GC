@@ -25,7 +25,10 @@ class HomeView {
     }
     function ShowInfoxLocalid($InfopXLocalidad){
         $this->smarty->assign('InfopXLocalidad',$InfopXLocalidad);   
-        $this->smarty->display('home_view_Filter.tpl');                
-        
+        $this->smarty->display('home_view_Filter.tpl');                      
     }  
+    function ShowDetalleInfop($infoPesca){
+        $this->smarty->assign('infoPesca',$infoPesca);   
+        $this->smarty->display('home_view_Detall.tpl');                      
+            }
 }

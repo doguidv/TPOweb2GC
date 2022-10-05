@@ -41,7 +41,10 @@
                 <label>Posible pesca</label>
                 <input name="pesca" type="text" class="form-control">
             </div>
-            
+            <div class="form-group">
+                <label>Detalles</label>
+                <input name="Detalles_Pesca" type="text" class="form-control">
+            </div>
         </div>
 
         <div class="col-3">

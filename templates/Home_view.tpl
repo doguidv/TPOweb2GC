@@ -22,6 +22,7 @@
         <td>{$pescas->carnada}</td>
         <td>{$pescas->pesca}</td>
         <td>{$pescas->localidad}</td>
+        <td><a href='Detalle/{$pescas->id_pesca}' type='button' class='btn btn-danger ml-auto'>Ver detalle</a>
      </tr>
      {/foreach}
      </tbody>
