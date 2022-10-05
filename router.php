@@ -82,7 +82,10 @@ switch ($params[0]) {
     case 'filtrar':
         $HomeController->filtrar();  
         break;  
-        
+        case 'Buscar':
+            $HomeController->buscar();  
+            break;  
+            
     default:
         echo('404 Page not found');
         break;

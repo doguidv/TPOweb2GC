@@ -1,8 +1,8 @@
 {include file="header.tpl"}
-{include file="SearchCateg.tpl"}
 <h1>Informacion listada por categoria</h1>
-
+{include file="SearchCateg.tpl"}
 <table>
+
     <thead>
         <tr>
             <th>Embarcado</th>

@@ -23,5 +23,9 @@ class HomeView {
         $this->smarty->display('SearchCateg.tpl');                            
 
     }
-                
+    function ShowInfoxLocalid($InfopXLocalidad){
+        $this->smarty->assign('InfopXLocalidad',$InfopXLocalidad);   
+        $this->smarty->display('home_view_Filter.tpl');                
+        
+    }  
 }
