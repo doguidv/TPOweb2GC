@@ -40,15 +40,14 @@ class CategModel {
         $sentencia= $this-> db->prepare("SELECT *FROM localidades WHERE id_localidad =?");
         $sentencia->execute([$id]);
         $updatecateg= $sentencia->fetch(PDO:: FETCH_OBJ);
-        return $updatecateg;
-    
+        return $updatecateg;    
     }
 
     function updatelocalid($localidad,$id_localidad) {
         $query=$this->db->prepare('UPDATE localidades SET  localidad =? WHERE id_localidad =?;');
         $query->execute([$localidad,$id_localidad]);
-       // header("Location: " . BASE_URL); 
-       var_dump($query->errorInfo());
+     header("Location: " . BASE_URL); 
+ 
     }
     /**
      * Elimina una localidad dado su id.

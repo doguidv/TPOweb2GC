@@ -14,14 +14,15 @@
     </thead>
     <tbody> 
     {foreach from=$InfopXLocalidad item=$InfopXLocalidades }  
-    <tr>
+    <tr> 
         <td>{$InfopXLocalidades->embarcado}</td>
         <td>{$InfopXLocalidades->tipo_embarcacion}</td>
         <td>{$InfopXLocalidades->equipo_pesca}</td>
         <td>{$InfopXLocalidades->carnada}</td>
-        <td>{$InfopXLocalidades->pesca}</td>
-        <td>{$InfopXLocalidades->localidad}</td>
-     </tr>
+        <td>{$InfopXLocalidades->pesca}</td>    
+        <td>{$InfopXLocalidades->localidad}</td>  
+
+        </tr>
      {/foreach}
      </tbody>
 </table>

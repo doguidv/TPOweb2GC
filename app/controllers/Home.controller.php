@@ -15,19 +15,16 @@ class HomeController {
     public function showHomeInfo() {
           $pesca  =  $this->modelHome->getAllinfopesca();
           $categ  =  $this->modelHome->getAllHomelocalid();
-        $this->viewHome->showHomeinfoxlocalid($pesca,$categ);
-    }
+          $this->viewHome->showHomeinfoxlocalid($pesca,$categ);
+        }
  
     public function showHomeCateg() {
         $categ  =  $this->modelHome->getAllHomelocalid();
       $this->viewHome->showHomelocalid($categ);
      
   }
-
-
-  public function buscar() {
-   $id_localidad  = $_POST['id_localidad'];
-    $InfopXLocalidad  = $this->modelHome->GetAllInfoPescaXpesca($id_localidad);
+  public function buscar($id) {
+    $InfopXLocalidad  = $this->modelHome->GetAllInfoPescaXlocalidad($id);
     $this->viewHome->ShowInfoxLocalid($InfopXLocalidad);
 
     }

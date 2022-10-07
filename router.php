@@ -62,6 +62,10 @@ switch ($params[0]) {
         $id = $params[1];
         $infoController->deleteinfo($id);
         break;
+        case 'buscar':
+            $id=$params[1];
+            $HomeController->buscar($id);  
+            break;  
     case'Detalle':
         $id = $params[1];        
         $HomeController->Detalle($id);
@@ -84,9 +88,6 @@ switch ($params[0]) {
         $idlocalid=$params[1];
         $CategController->deleteLocalid($idlocalid);
         break;
-        case 'Buscar':
-            $HomeController->buscar();  
-            break;  
             
     default:
         echo('404 Page not found');

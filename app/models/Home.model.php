@@ -23,15 +23,15 @@ class HomeModel {
         return $localid;
         }
     public function getAllinfopesca(){      
-        $query = $this->db->prepare("SELECT info_pesca.*,localidades.localidad  as localidad FROM info_pesca JOIN localidades ON info_pesca.id_localidad_fk = localidades.id_localidad");
+        $query = $this->db->prepare("SELECT info_pesca.*,localidades.* FROM info_pesca JOIN localidades ON info_pesca.id_localidad_fk = localidades.id_localidad");
         $query->execute();
          $info=$query->fetchAll(PDO::FETCH_OBJ);
          return $info;
          }
-    public function GetAllInfoPescaXpesca($id_localidad){
-        $query = $this->db->prepare("SELECT info_pesca.*,localidades.localidad  as localidad FROM info_pesca JOIN localidades ON info_pesca.id_localidad_fk = localidades.id_localidad WHERE id_localidad_fk LIKE ? ");
-        $query->execute([$id_localidad]);
-        $infoXlocalidad=$query->fetchAll(PDO::FETCH_OBJ);
+    public function GetAllInfoPescaXlocalidad($id){ 
+        $query = $this->db->prepare("SELECT info_pesca.*,localidades.*  FROM info_pesca JOIN localidades ON info_pesca.id_localidad_fk = localidades.id_localidad WHERE id_localidad_fk =?"); 
+        $query->execute([$id]);
+        $infoXlocalidad= $query->fetchALL(PDO:: FETCH_OBJ);
         return $infoXlocalidad;
         }
     public  function GetinfoById($id){
