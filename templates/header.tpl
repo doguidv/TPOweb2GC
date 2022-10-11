@@ -29,17 +29,18 @@
                     <a class="nav-link" aria-current="page" href="categ">Categorias</a>
                   </li>
                 </ul>
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="Registro">Registrar</a>
-                  </li>
-                </ul>
-                <ul class="navbar-nav">
+                <ul class="navbar-nav d-flex">
+                  {if !isset($smarty.session.USER_ID)}
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="login">Login</a>
                   </li>
-                </ul>
-                <ul class="navbar-nav">
+                {else} 
+                  <li class="nav-item ml-auto">
+                    <a class="nav-link" aria-current="page" href="logout">Logout ({$smarty.session.USER_EMAIL})</a>
+                  </li>
+                {/if}
+              </ul>
+               <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="infopesca">info pesca</a>
                   </li>
