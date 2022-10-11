@@ -1,7 +1,7 @@
 <?php
 require_once './app/models/info.model.php';
 require_once './app/views/info.view.php';
-
+require_once './app/helpers/auth.helper.php';
 
 class infoController {
     private $model;
@@ -10,6 +10,10 @@ class infoController {
     public function __construct() {
         $this->model = new infoModel();
         $this->view = new infoView();
+        // barrera de seguridad
+        $authHelper = new AuthHelper();
+        $authHelper->checkLoggedIn();
+
     }
    
     public function showinfo() {
@@ -29,7 +33,7 @@ class infoController {
         $id_localidad_fk=$_POST['id_localidad_fk'];
         $Detalles_Pesca=$_POST['Detalles_Pesca'];
         $id = $this->model->insertinfopesca($embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$Detalles_Pesca,$id_localidad_fk);
-        header("Location: " . BASE_URL); 
+        header("Location: " . BASE_URL .'infopesca'); 
     }
     //seccion update   
     function upDateinfo($id) {
@@ -52,7 +56,7 @@ class infoController {
 
     function deleteinfo($id) {
         $this->model->deleteinfoById($id);
-        header("Location: " . BASE_URL);
+        header("Location: " . BASE_URL.'infopesca');
     }
 
 }

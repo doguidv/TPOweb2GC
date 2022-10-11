@@ -16,14 +16,9 @@ if (!empty($_GET['action'])) {
 // parsea la accion Ej: dev/juan --> ['dev', juan]
 $params = explode('/', $action);
 
-// instancio el unico controller que existe por ahora
-$infoController = new infoController();
-$CategController=new CategController();
-$HomeController=new HomeController();
-
-
 // tabla de ruteo
 switch ($params[0]) {
+    //Home
     case 'home':       
          $HomeController=new HomeController();
          $HomeController->showHomeInfo();  
@@ -56,6 +51,8 @@ switch ($params[0]) {
         $authController->logout();
         break;
         //fin loguin
+     
+        //ABM Info pesca
     case 'infopesca':    
         $infoController = new infoController();
         $infoController->showinfo();       
@@ -79,7 +76,7 @@ switch ($params[0]) {
         $id = $params[1];
         $infoController->deleteinfo($id);
         break;
-        //Categ
+        //ABM Categ
     case 'localidad':
         $CategController=new CategController();
         $CategController->showlocalid();
@@ -90,8 +87,8 @@ switch ($params[0]) {
         break;        
      case 'ShowUpdatCateg':
         $CategController=new CategController();        
-        $id=$params[1];
-        $CategController->ShowUpdateCateg($id);
+        $idlocalid=$params[1];
+        $CategController->ShowUpdateCateg($idlocalid);
          break;    
     case 'editCateg':
         $CategController=new CategController();

@@ -1,6 +1,24 @@
  {include file="header.tpl"}
     <h2>Login</h2>
-    <form action="Login" method="POST">
-        <input type="text" name="Email" placeholder="Ingrese su email..."/>
-        <input type="Password" name="Password" placeholder="Ingrese su password..."/>
-        <button type="submit">Login</button>
+            <div class="mt-5 w-25 mx-auto">
+            <form method="POST" action="validate">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" required class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" required class="form-control" id="password" name="password">
+                </div>
+        
+                {if $error} 
+                    <div class="alert alert-danger mt-3">
+                        {$error}
+                    </div>
+                {/if}
+                <button type="submit" class="btn btn-primary mt-3">Entrar</button>
+            </form>
+        </div>
+        
+        {include file='footer.tpl'}
+        

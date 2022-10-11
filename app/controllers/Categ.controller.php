@@ -1,7 +1,7 @@
 <?php
 require_once './app/models/Categ.model.php';
 require_once './app/views/Categ.view.php';
-
+require_once './app/helpers/auth.helper.php';
 class CategController {
      private $model;
      private $view;
@@ -9,6 +9,11 @@ class CategController {
         public function __construct() {
             $this->model = new CategModel();
             $this->view = new CategView();
+        
+                // barrera de seguridad
+            $authHelper = new AuthHelper();
+            $authHelper->checkLoggedIn();
+
         }
 
         public function showLocalid() {
@@ -24,12 +29,12 @@ class CategController {
             $localidad=$_POST['localidad'];
             $idlocalid = $this->model->insertlocalid($localidad);
 
-            header("Location: " . BASE_URL); 
+            header("Location: " . BASE_URL.'categ'); 
         }
 
         function deleteLocalid($idlocalid) {
             $this->model->deletelocalidById($idlocalid);
-            header("Location: " . BASE_URL);
+            header("Location: " . BASE_URL.'categ');
         }
 
         function ShowUpdateCateg($id) {
@@ -42,6 +47,6 @@ class CategController {
                 $localidad=$_POST['localidad'];
             $id = $this->model->updatelocalid($localidad,$id_localidad);
             
-    }
+        }
 }
 

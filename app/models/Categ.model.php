@@ -33,7 +33,7 @@ class CategModel {
         $query->execute([$localidad]);
         return $this->db->lastInsertId();
     }
-/**
+    /**
      * modifica una localidad dado su id.
      */
     function upDatelocalidById($id){
@@ -46,8 +46,7 @@ class CategModel {
     function updatelocalid($localidad,$id_localidad) {
         $query=$this->db->prepare('UPDATE localidades SET  localidad =? WHERE id_localidad =?;');
         $query->execute([$localidad,$id_localidad]);
-     header("Location: " . BASE_URL); 
- 
+        header("Location: " . BASE_URL .'categ');  
     }
     /**
      * Elimina una localidad dado su id.
