@@ -22,31 +22,28 @@ class CategController {
             $this->view->showlocalid($Localid);
         
         }
-
         
         function addLocalid() {
             // TODO: validar entrada de datos
             $localidad=$_POST['localidad'];
             $idlocalid = $this->model->insertlocalid($localidad);
+            header("Location: " . BASE_URL.'localidad'); 
+            }
 
-            header("Location: " . BASE_URL.'categ'); 
-        }
-
-        function deleteLocalid($idlocalid) {
-            $this->model->deletelocalidById($idlocalid);
-            header("Location: " . BASE_URL.'categ');
-        }
 
         function ShowUpdateCateg($id) {
-        $Categ= $this->model->upDatelocalidById($id);
-        $this->view->UpdateCateg($Categ);
-        }
+            $Categ= $this->model->upDatelocalidById($id);
+            $this->view->UpdateCateg($Categ);
+            }
         function Updatelocalid() {
             // TODO: validar entrada de datos
             $id_localidad=$_POST['id_localidad'];
-                $localidad=$_POST['localidad'];
+            $localidad=$_POST['localidad'];
             $id = $this->model->updatelocalid($localidad,$id_localidad);
-            
-        }
+            }
+        function deleteLocalid($id) {
+            $this->model->deletelocalidById($id);
+            header("Location: " . BASE_URL.'localidad');
+            }
 }
 

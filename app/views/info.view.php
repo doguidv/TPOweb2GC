@@ -12,22 +12,19 @@ class infoView {
        $this->smarty->display('ShowInfoPesca.tpl');
 
     }
- 
    function showAddinfopesca($infoloc,$localidad){ 
     $this->smarty->assign('infoloc',$infoloc); 
    $this->smarty->assign('localidad',$localidad);
-    }
-           
+    }          
       function add(){
         $this->smarty->display('Add_info.tpl');
       }
-
-                                    //Update
-            function upDateinfo_pesca($infop,$localidad){
-              $this->smarty->assign('localidad',$localidad);
-               $this->smarty->assign('infop',$infop);         
-                $this->smarty->display('Update_info.tpl');
-          } 
+                //Update
+       function upDateinfo_pesca($infop,$localidad){
+           $this->smarty->assign('localidad',$localidad);
+           $this->smarty->assign('infop',$infop);         
+           $this->smarty->display('Update_info.tpl');
+           } 
 }             
 
             
