@@ -34,13 +34,14 @@
                   <li class="nav-item ml-auto">
                     <a class="nav-link" aria-current="page" href="logout">Logout ({$smarty.SESSION.USER_EMAIL})</a>
                   </li>
-                {/if} 
-                <li class="nav-item ml-auto">
-                <a class="nav-link" aria-current="page" href="infopesca"> Info Pesca</a>
-               </li>
-              <li class="nav-item ml-auto">
-                <a class="nav-link" aria-current="page" href="localidad">Localidades</a>
-                </li>
+                {/if}                                              
+                    <li class="nav-item ml-auto">
+                     <a class="nav-link" aria-current="page" href="infopesca"> Info Pesca</a>
+                    </li>
+                    <li class="nav-item ml-auto">
+                    <a class="nav-link" aria-current="page" href="localidad">Localidades</a>
+                    </li>
+                
               </ul>
             </div>
 

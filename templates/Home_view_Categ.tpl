@@ -3,16 +3,14 @@
 
    <h2> Listado de categoria</h1>
    <table>
-           <thead>
+        <thead>
            <tr>
                <th>Localidad</th>
                </tr>
            <thead>
-           <tbody>
-   
+           <tbody>   
            {foreach from=$categ item=$categs }
-               <tr>
-           
+               <tr>        
                    <td>{$categs->localidad}</td>
                </tr>
            {/foreach}            

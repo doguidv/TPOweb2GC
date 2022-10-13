@@ -25,6 +25,8 @@ class infoController {
     }
     function addInfopesca() {
         // TODO: validar entrada de datos
+        if (!empty($_POST['embarcado'])&&!empty($_POST['tipo_embarcacion'])&&!empty($_POST['equipo_pesca'])&&!empty($_POST['carnada'])&&!empty($_POST['pesca'])&&!empty($_POST['id_localidad_fk'])&&!empty($_POST['Detalles_Pesca'])) {
+            # code...
         $embarcado = $_POST['embarcado'];
         $tipo_embarcacion = $_POST['tipo_embarcacion'];
         $equipo_pesca = $_POST['equipo_pesca'];
@@ -34,6 +36,11 @@ class infoController {
         $Detalles_Pesca=$_POST['Detalles_Pesca'];
         $id = $this->model->insertinfopesca($embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$Detalles_Pesca,$id_localidad_fk);
         header("Location: " . BASE_URL .'infopesca'); 
+        }
+        else {
+            echo"No se permiten campos en blanco";
+        }
+           
     }
     //seccion update   
     function upDateinfo($id) {
@@ -43,15 +50,22 @@ class infoController {
     }
     function editinfo() {
         // TODO: validar entrada de datos       
-        $embarcado = $_POST['embarcado'];
-        $tipo_embarcacion = $_POST['tipo_embarcacion'];
-        $equipo_pesca = $_POST['equipo_pesca'];
-        $carnada= $_POST['carnada'];
-        $pesca= $_POST['pesca'];
-        $id_localidad_fk=$_POST['id_localidad_fk'];
-        $id_pesca = $_POST['id_pesca'];
-        $Detalles_Pesca=$_POST['Detalles_Pesca'];
-        $id = $this->model->info_pesca($embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$Detalles_Pesca,$id_localidad_fk,$id_pesca);
+        if (!empty($_POST['embarcado'])&&!empty($_POST['tipo_embarcacion'])&&!empty($_POST['equipo_pesca'])&&!empty($_POST['carnada'])&&!empty($_POST['pesca'])&&!empty($_POST['id_localidad_fk'])&&!empty($_POST['Detalles_Pesca'])) {
+            # code... 
+            $embarcado = $_POST['embarcado'];
+            $tipo_embarcacion = $_POST['tipo_embarcacion'];
+            $equipo_pesca = $_POST['equipo_pesca'];
+            $carnada= $_POST['carnada'];
+            $pesca= $_POST['pesca'];
+            $id_localidad_fk=$_POST['id_localidad_fk'];
+            $id_pesca = $_POST['id_pesca'];
+            $Detalles_Pesca=$_POST['Detalles_Pesca'];
+            $id = $this->model->info_pesca($embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$Detalles_Pesca,$id_localidad_fk,$id_pesca);
+       
+        } 
+        else{
+            echo"No se permiten campos en blanco";            
+        }
     }
 
     function deleteinfo($id) {
