@@ -84,7 +84,7 @@ switch ($params[0]) {
     case 'addCateg':        
         $CategController=new CategController();
         $CategController->addlocalid();
-        break;        
+        break; 
      case 'ShowUpdatCateg':
         $CategController=new CategController();        
         $id=$params[1];

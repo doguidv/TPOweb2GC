@@ -21,11 +21,12 @@ class infoController {
         $infopesca=$this->model->getAllpesca();
         $localidad=$this->model->getAlllocalidades();
         $this->view->showAddinfopesca($infopesca,$localidad);
-        $this->view->showpesca($pesca);
+        $this->view->add();
+         $this->view->showpesca($pesca);        
     }
     function addInfopesca() {
         // TODO: validar entrada de datos
-        if (!empty($_POST['embarcado'])&&!empty($_POST['tipo_embarcacion'])&&!empty($_POST['equipo_pesca'])&&!empty($_POST['carnada'])&&!empty($_POST['pesca'])&&!empty($_POST['id_localidad_fk'])&&!empty($_POST['Detalles_Pesca'])) {
+        if (!empty($_POST['embarcado']) && !empty($_POST['tipo_embarcacion']) && !empty($_POST['equipo_pesca']) && !empty($_POST['carnada']) && !empty($_POST['pesca']) && !empty($_POST['id_localidad_fk']) && !empty($_POST['Detalles_Pesca'])) {
             # code...
         $embarcado = $_POST['embarcado'];
         $tipo_embarcacion = $_POST['tipo_embarcacion'];
@@ -38,7 +39,7 @@ class infoController {
         header("Location: " . BASE_URL .'infopesca'); 
         }
         else {
-            echo"No se permiten campos en blanco";
+            $this->view->add("No se permiten campos en blanco");
         }
            
     }

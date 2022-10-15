@@ -31,7 +31,7 @@ class CategController {
             header("Location: " . BASE_URL.'localidad'); 
             }
             else{
-                echo 'No se permiten campos en blanco';
+                $this->view->addCateg('No se permiten campos en blanco');
             }
         }
         function ShowUpdateCateg($id) {

@@ -1,7 +1,4 @@
-              
-{include file="header.tpl"}           
-{include file="Add_info.tpl"}
-
+   
 <table>
     <thead>
         <tr>

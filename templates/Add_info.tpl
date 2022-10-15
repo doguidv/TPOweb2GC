@@ -1,4 +1,4 @@
-
+{include file="header.tpl"}
                  <!-- ADD Info-->
                  <form action="add" method="POST" class="my-4">
     <div class="row">
@@ -46,7 +46,6 @@
                 <input name="Detalles_Pesca" type="text" class="form-control">
             </div>
         </div>
-
         <div class="col-3">
             <div class="form-group">
     <select name='id_localidad_fk' class='from_control'> 
@@ -56,8 +55,12 @@
     </select>
             </div>
         </div>
-    </div>
-    
+    </div> 
     <button type="submit" class="btn btn-primary mt-2">Guardar</button>
+    {if $error} 
+        <div class="alert alert-danger mt-3">
+            {$error}
+        </div>
+    {/if}
     </form>
     
