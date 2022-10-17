@@ -39,15 +39,10 @@ class CategController {
             $this->view->UpdateCateg($Categ);
             }
         function Updatelocalid() {
-            // TODO: validar entrada de datos
-            if (!empty($_POST['id_localidad'])&&!empty($_POST['localidad'])) {       
+            // TODO: validar entrada de datos    
             $id_localidad=$_POST['id_localidad'];
             $localidad=$_POST['localidad'];
-            $id = $this->model->updatelocalid($localidad,$id_localidad);
-            }
-        else{
-            echo'No se permiten campos en blanco';
-        }
+            $id = $this->model->updatelocalid($localidad,$id_localidad);   
         }
         function deleteLocalid($id) {
             $this->model->deletelocalidById($id);

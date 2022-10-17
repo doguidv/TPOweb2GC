@@ -10,5 +10,7 @@
       </div>                          
     </div>
   </div>
+
    <button type="submit" class="btn btn-primary mt-2" value="Modificar Localidad">Modificar Localidad</button>
+ 
 </form>

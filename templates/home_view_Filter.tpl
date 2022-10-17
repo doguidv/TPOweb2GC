@@ -14,14 +14,14 @@
     </thead>
     <tbody> 
     {foreach from=$InfopXLocalidad item=$InfopXLocalidades }  
-    <tr> 
-        <td>{$InfopXLocalidades->embarcado}</td>
-        <td>{$InfopXLocalidades->tipo_embarcacion}</td>
-        <td>{$InfopXLocalidades->equipo_pesca}</td>
-        <td>{$InfopXLocalidades->carnada}</td>
-        <td>{$InfopXLocalidades->pesca}</td>    
-        <td>{$InfopXLocalidades->localidad}</td>  
-
+    <tr>
+     <td>{$InfopXLocalidades->embarcado|truncate:5}</td>
+    <td>{$InfopXLocalidades->tipo_embarcacion|truncate:10}</td>
+    <td>{$InfopXLocalidades->equipo_pesca|truncate:20}</td>
+    <td>{$InfopXLocalidades->carnada|truncate:20}</td>
+    <td>{$InfopXLocalidades->pesca|truncate:20}</td>
+    <td>{$InfopXLocalidades->Detalles_Pesca|truncate:25}</td> 
+    <td>{$InfopXLocalidades->localidad|truncate:25}</td>
         </tr>
      {/foreach}
      </tbody>

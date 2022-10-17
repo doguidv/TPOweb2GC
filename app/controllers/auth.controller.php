@@ -29,13 +29,14 @@ class AuthController {
             session_start();
             $_SESSION['USER_ID'] = $user->id;
             $_SESSION['USER_EMAIL'] = $user->email;
-            $_SESSION['IS_LOGGED'] = false;
+            $_SESSION['IS_LOGGED'] = true;
             header("Location: " . BASE_URL.'infopesca');
         } else {
             // si los datos son incorrectos muestro el form con un erro
            $this->view->showFormLogin("El usuario o la contraseña no existe.");
-        } 
     }
+   
+}  
     public function logout() {
         session_start();
         session_destroy();

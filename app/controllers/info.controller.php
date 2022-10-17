@@ -51,7 +51,6 @@ class infoController {
     }
     function editinfo() {
         // TODO: validar entrada de datos       
-        if (!empty($_POST['embarcado'])&&!empty($_POST['tipo_embarcacion'])&&!empty($_POST['equipo_pesca'])&&!empty($_POST['carnada'])&&!empty($_POST['pesca'])&&!empty($_POST['id_localidad_fk'])&&!empty($_POST['Detalles_Pesca'])) {
             # code... 
             $embarcado = $_POST['embarcado'];
             $tipo_embarcacion = $_POST['tipo_embarcacion'];
@@ -62,11 +61,6 @@ class infoController {
             $id_pesca = $_POST['id_pesca'];
             $Detalles_Pesca=$_POST['Detalles_Pesca'];
             $id = $this->model->info_pesca($embarcado, $tipo_embarcacion, $equipo_pesca,$carnada,$pesca,$Detalles_Pesca,$id_localidad_fk,$id_pesca);
-       
-        } 
-        else{
-            echo"No se permiten campos en blanco";            
-        }
     }
 
     function deleteinfo($id) {

@@ -17,3 +17,5 @@
            </tbody>
         </thead>            
    </table>
+   
+{include file="footer.tpl"}

@@ -16,12 +16,13 @@
     <tbody> 
     {foreach from=$pesca item=$pescas }  
     <tr>
-        <td>{$pescas->embarcado}</td>
-        <td>{$pescas->tipo_embarcacion}</td>
-        <td>{$pescas->equipo_pesca}</td>
-        <td>{$pescas->carnada}</td>
-        <td>{$pescas->pesca}</td>
-        <td>{$pescas->localidad}</td>           
+    <td>{$pescas->embarcado|truncate:5}</td>
+    <td>{$pescas->tipo_embarcacion|truncate:10}</td>
+    <td>{$pescas->equipo_pesca|truncate:20}</td>
+    <td>{$pescas->carnada|truncate:20}</td>
+    <td>{$pescas->pesca|truncate:20}</td>
+    <td>{$pescas->Detalles_Pesca|truncate:25}</td> 
+    <td>{$pescas->id_localidad_fk|truncate:25}</td>         
         <td><a href='buscar/{$pescas->id_localidad}' type='button' class='btn btn-danger ml-auto'>Listado de items por categoria</a>
         <td><a href='Detalle/{$pescas->id_pesca}' type='button' class='btn btn-danger ml-auto'>Ver detalle</a>
      </tr>
@@ -29,3 +30,4 @@
      </tbody>
 </table>
 
+{include file="footer.tpl"}

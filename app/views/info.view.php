@@ -21,9 +21,9 @@ class infoView {
     $this->smarty->display('Add_info.tpl');
     }
                 //Update
-  function upDateinfo_pesca($infop,$localidad){
+  function UpDateinfo_pesca($infop,$localidad){
     $this->smarty->assign('localidad',$localidad);
-    $this->smarty->assign('infop',$infop);         
+    $this->smarty->assign('infop',$infop);        
     $this->smarty->display('Update_info.tpl');
     } 
 }             
