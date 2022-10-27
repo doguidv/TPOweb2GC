@@ -21,8 +21,7 @@
     <td>{$pescas->equipo_pesca|truncate:20}</td>
     <td>{$pescas->carnada|truncate:20}</td>
     <td>{$pescas->pesca|truncate:20}</td>
-    <td>{$pescas->Detalles_Pesca|truncate:25}</td> 
-    <td>{$pescas->id_localidad_fk|truncate:25}</td>         
+    <td>{$pescas->Detalles_Pesca|truncate:25}</td>         
         <td><a href='buscar/{$pescas->id_localidad}' type='button' class='btn btn-danger ml-auto'>Listado de items por categoria</a>
         <td><a href='Detalle/{$pescas->id_pesca}' type='button' class='btn btn-danger ml-auto'>Ver detalle</a>
      </tr>
